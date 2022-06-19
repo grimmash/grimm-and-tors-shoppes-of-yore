@@ -28,7 +28,7 @@ On top of that we have created almost a dozen styles of labels you can use to la
 
 ![Shelf Example](shelf_example.png)
 
-There are about a dozen premade "shelf" actors, and about 15 styles of label, each with about 60 variants that cover most groups of items in the SRD.   
+There are about a dozen premade "shelf" actors, and about 15 styles of label, each with about 60 variants that cover most groups of items in the SRD.  The images are in `/assets/images/labels` and organized by style. 
 
 ![Styles](label_styles.png)
 
