@@ -28,17 +28,50 @@ On top of that we have created almost a dozen styles of labels you can use to la
 
 ![Shelf Example](shelf_example.png)
 
-There are about a dozen premade "shelf" actors, and about 15 styles of label, each with about 60 variants that cover most groups of items in the SRD.  The images are in `/assets/images/labels` and organized by style. 
+There are premade "shelf" actors with a blue text on white scroll label for most categories of goods. These actors mostly have 1 of every item on the respective `rolltable`.
+
+There are about 15 styles of label, each with about 60 variants that cover most groups of items in the SRD.  The images are in `/assets/images/labels` and organized by style.
 
 ![Styles](label_styles.png)
 
+The labels themselves do not map to the categories exactly as we decided to use "in lore" names where we could for flavor, and label lists very explicitly.  So there is no "Alchemy" label, but there is an "Apothecary" label.  We may update this in the future!
+
 ## Scenes
 Currently we have one premade scene, a Magic Shoppe that is a good example of using the shelf approach in action.
+
 ![Magic Shoppe](magic_shoppe.png)
+
+# Customizing Your Merchants
+You can use the default actors.  They mostly come with one of every item in a given table in their inventory.  However, I would recommend re-rolling the table randomly for things like scrolls, magic items, and other more exotic goods.  You can also drag items onto the merchant to stock specific things you want.
+
+If you want to make `rolltables` you can do so, and just use the interface in MerchantNPC to update the inventory.
+
+You can also nest tables within tables to do nifty things like set up the relative rarity of items.  So you could have a Scroll Vendor who uses a table which rolls on other tables with weighted rolls:
+
+![Weighted, nested tables.](weighted_table.png)
+
 # Contents
 ## Compendia
-- Shoppes Actors - About 20 premade shelf actors
-- Shoppes Magic Scrolls (by level)
+- Shoppes Actors - Premade shelf actors
+- Shoppes Items - Magic Scrolls for all SRD spells (organized by level)
 - Shoppes Journals - Contains the Readme in game
-- Shoppes Tables - All the roll tables
-- Shoppes Scenes - Currently the Magic Shoppe
+- Shoppes Tables - All the rolltables
+- Shoppes Scenes
+  - Magic Shoppe
+
+## Label Locations
+Where to find all the variant labels:
+### Non-Forge Installs
+The location for assets should be in modules/grimm-and-tors-shoppes-of-yore/assets/images/labels.  If you have moved modules to another location, please look there.
+### Forge Manual Installs
+The location will be similar to the above, but will be somewhere in your "My Assets Library" tab.
+### Forge Bazaar Installs
+The assets will be similar to above, but in the "The Bazaar" tab.
+
+
+# Known Issues
+## Nested Tables and MerchantNPC
+A small number of the tables in this mod use nested tables.  Usually this happens when we combine tables like each tier of magic item, or each tier of magic scroll.  These appear to only work when populating the merchant NPC sheet if you let it roll some number of times for "Shop Qty".  It will not allow you to check the ALL box.  Actors where this is known to happen, and we have randomly seeded the actors:
+- Armor - Magic All
+- Magic Scrolls (All Tiers and All)
+- Weapons - Magic All
